@@ -53,6 +53,34 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 </script>
+<script>
+  // Facebook Pixel Base Code
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;
+  n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  
+  fbq('init', '1247248706723644'); // Substitua pelo seu Pixel ID
+  fbq('track', 'PageView'); // Evento de PageView
+</script>
+<noscript>
+  <img height="1" width="1" style="display:none" 
+  src="https://www.facebook.com/tr?id=1247248706723644&ev=PageView&noscript=1"/>
+</noscript>
+
+<script>
+  // Rastrear cliques em botões que levam ao link específico
+  document.querySelectorAll('a[href="https://app.glitchy.ai/sign-up?rid=25677"]').forEach(function(link) {
+    link.addEventListener('click', function() {
+      fbq('track', 'Lead'); // Dispara o evento Lead
+    });
+  });
+</script>
 
 
 <script type="text/javascript">
